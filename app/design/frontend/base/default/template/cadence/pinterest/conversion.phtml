@@ -4,7 +4,7 @@ $helper = Mage::helper("cadence_pinterest");
 if (!$helper->isConversionPixelEnabled()) {
     return;
 }
-$id = $helper->getConversionPixelId();
+$id = $helper->getTagId();
 ?>
 <?php
 $order_id = Mage::getSingleton('checkout/session')->getLastOrderId();
@@ -16,12 +16,20 @@ if (!$order_id || intval($order_id) < 1) {
 $order = Mage::getModel('sales/order')->load($order_id);
 $grand_total = round($order->getGrandTotal(), 2);
 $currency_code = Mage::app()->getStore()->getCurrentCurrencyCode();
-$total_qty = 0;
-/** @var Mage_Sales_Model_Order_Item $item */
-foreach($order->getAllVisibleItems() as $item) {
-    $total_qty += $item->getQtyOrdered();
-}
+$qtyOrdered = $helper->getOrderItemsQty();
+$orderItemJson = $helper->getOrderItemsJson();
 ?>
-<!-- Pinterest Conversion Pixel Code -->
-<img height="1" width="1" style="display:none;" alt="" src="https://ct.pinterest.com/?tid=<?php echo $id ?>&value=<?php echo $grand_total ?>&quantity=<?php echo $total_qty ?>"/>
-<!-- End Pinterest Conversion Pixel Code -->
+<!-- Pinterest Conversion Code for Conversions -->
+<script>
+    pintrk('track','checkout', {
+        value: <?php echo $grand_total ?>,
+        currency: '<?php echo $currency_code ?>',
+        order_quantity: <?php echo $qtyOrdered; ?>,
+        line_items: <?php echo $orderItemJson ?>
+    });
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt=""
+     src="https://ct.pinterest.com/v3/?tid=<?php echo $id ?>&event=checkout&ed[value]=<?php echo $grand_total ?>&ed[order_quantity]=<?php echo $qtyOrdered
+     ?>&ed[currency]=<?php echo $currency_code ?>&noscript=1"/>
+</noscript>

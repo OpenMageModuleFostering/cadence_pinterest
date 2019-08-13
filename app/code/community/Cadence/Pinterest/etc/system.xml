@@ -8,7 +8,7 @@
     </tabs>
     <sections>
         <cadence_pinterest translate="label">
-            <label>Pinterest Pixel</label>
+            <label>Pinterest Tag</label>
             <tab>cadence</tab>
             <frontend_type>text</frontend_type>
             <sort_order>100</sort_order>
@@ -17,7 +17,7 @@
             <show_in_store>1</show_in_store>
             <groups>
                 <visitor translate="label">
-                    <label>Visitor Pixel</label>
+                    <label>Base Tag</label>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
@@ -32,19 +32,19 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </enabled>
-                        <pixel_id translate="label">
-                            <label>Pixel Tid</label>
+                        <tag_id translate="label">
+                            <label>Tag Id (TID)</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment>This is the pixel tid (see the install guide for instructions on where to find this). Make sure to select conversion type "Visit" for this pixel!</comment>
-                        </pixel_id>
+                            <comment>This is the TID (tag id) for the Pinterest tag (see the install guide for instructions on where to find this).</comment>
+                        </tag_id>
                     </fields>
                 </visitor>
                 <conversion translate="label">
-                    <label>Checkout Pixel (Optional)</label>
+                    <label>Conversion Event (Optional)</label>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
@@ -58,18 +58,29 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
+                            <comment>The base tag must be enabled to track conversions. Includes parameters for grand total, quantity ordered, and currency.</comment>
                         </enabled>
-                        <pixel_id translate="label">
-                            <label>Pixel Tid</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>20</sort_order>
+                    </fields>
+                </conversion>
+                <add_to_cart translate="label">
+                    <label>Add To Cart (Optional)</label>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <sort_order>3</sort_order>
+                    <fields>
+                        <enabled translate="label" module="cadence_pinterest">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment>This is the pixel tid (see the install guide for instructions on where to find this). Make sure to select conversion type "Checkout" for this pixel!</comment>
-                        </pixel_id>
+                            <comment>The base tag must be enabled to track AddToCart. Includes parameters for product subtotal, quantity added, and currency.</comment>
+                        </enabled>
                     </fields>
-                </conversion>
+                </add_to_cart>
             </groups>
         </cadence_pinterest>
     </sections>

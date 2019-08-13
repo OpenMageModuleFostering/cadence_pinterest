@@ -1,0 +1,13 @@
+<?php
+/**
+ * @author Cadence Labs <info@cadence-labs.com>
+ * @var Cadence_Pinterest_Helper_Data $helper
+ * @var Cadence_Pinterest_Model_Session $session
+ */
+
+$helper = Mage::helper("cadence_pinterest");
+$session = Mage::getSingleton('cadence_pinterest/session');
+
+if ($helper->isAddToCartPixelEnabled() && $session->hasAddToCart()) {
+    echo $helper->getPixelHtml('AddToCart', $session->getAddToCart());
+}

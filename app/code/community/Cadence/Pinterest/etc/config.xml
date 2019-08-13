@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Cadence_Pinterest>
-            <version>0.1.0</version>
+            <version>2.0.0</version>
         </Cadence_Pinterest>
     </modules>
     <global>
@@ -11,6 +11,11 @@
                 <class>Cadence_Pinterest_Helper</class>
             </cadence_pinterest>
         </helpers>
+        <models>
+            <cadence_pinterest>
+                <class>Cadence_Pinterest_Model</class>
+            </cadence_pinterest>
+        </models>
     </global>
     <frontend>
         <layout>
@@ -20,6 +25,16 @@
                 </cadence_pinterest>
             </updates>
         </layout>
+        <events>
+            <sales_quote_product_add_after>
+                <observers>
+                    <cadence_pinterest_add_to_cart>
+                        <class>Cadence_Pinterest_Model_Observer</class>
+                        <method>onSalesQuoteProductAddAfter</method>
+                    </cadence_pinterest_add_to_cart>
+                </observers>
+            </sales_quote_product_add_after>
+        </events>
     </frontend>
     <default>
         <cadence_pinterest>
@@ -29,6 +44,9 @@
             <conversion>
                 <enabled>0</enabled>
             </conversion>
+            <add_to_cart>
+                <enabled>0</enabled>
+            </add_to_cart>
         </cadence_pinterest>
     </default>
 </config>

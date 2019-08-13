@@ -2,7 +2,8 @@
 <layout version="0.1.0">
     <default>
         <reference name="head">
-            <block type="core/template" template="cadence/pinterest/visitor.phtml" />
+            <block type="core/template" template="cadence/pinterest/visitor.phtml" name="cadence_pinterest_visitor" />
+            <block type="core/template" template="cadence/pinterest/events.phtml" name="cadence_pinterest_events" />
         </reference>
     </default>
     <checkout_onepage_success translate="label">
@@ -10,9 +11,4 @@
             <block type="core/template" template="cadence/pinterest/conversion.phtml" />
         </reference>
     </checkout_onepage_success>
-    <checkout_multishipping_success translate="label">
-        <reference name="after_body_start">
-            <block type="core/template" template="cadence/pinterest/conversion.phtml" />
-        </reference>
-    </checkout_multishipping_success>
 </layout>
