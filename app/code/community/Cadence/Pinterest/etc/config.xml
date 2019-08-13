@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Cadence_Pinterest>
+            <version>0.1.0</version>
+        </Cadence_Pinterest>
+    </modules>
+    <global>
+        <helpers>
+            <cadence_pinterest>
+                <class>Cadence_Pinterest_Helper</class>
+            </cadence_pinterest>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <cadence_pinterest>
+                    <file>cadence_pinterest.xml</file>
+                </cadence_pinterest>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <cadence_pinterest>
+            <visitor>
+                <enabled>0</enabled>
+            </visitor>
+            <conversion>
+                <enabled>0</enabled>
+            </conversion>
+        </cadence_pinterest>
+    </default>
+</config>

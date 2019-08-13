@@ -1,0 +1,27 @@
+<?php
+/** @var Cadence_Pinterest_Helper_Data $helper */
+$helper = Mage::helper("cadence_pinterest");
+if (!$helper->isConversionPixelEnabled()) {
+    return;
+}
+$id = $helper->getConversionPixelId();
+?>
+<?php
+$order_id = Mage::getSingleton('checkout/session')->getLastOrderId();
+if (!$order_id || intval($order_id) < 1) {
+    //Failsafe for bad order id
+    return;
+}
+/** @var Mage_Sales_Model_Order $order */
+$order = Mage::getModel('sales/order')->load($order_id);
+$grand_total = round($order->getGrandTotal(), 2);
+$currency_code = Mage::app()->getStore()->getCurrentCurrencyCode();
+$total_qty = 0;
+/** @var Mage_Sales_Model_Order_Item $item */
+foreach($order->getAllVisibleItems() as $item) {
+    $total_qty += $item->getQtyOrdered();
+}
+?>
+<!-- Pinterest Conversion Pixel Code -->
+<img height="1" width="1" style="display:none;" alt="" src="https://ct.pinterest.com/?tid=<?php echo $id ?>&value=<?php echo $grand_total ?>&quantity=<?php echo $total_qty ?>"/>
+<!-- End Pinterest Conversion Pixel Code -->

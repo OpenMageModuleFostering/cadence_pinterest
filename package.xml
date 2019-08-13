@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+    <name>cadence_pinterest</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>GNU GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This extension allows you to quickly implement Pinterest conversion tracking and code on your Magento store. Supports Visit and Checkout conversion events. </summary>
+    <description>&lt;p&gt;This Pinterest Conversion Tracking Code extension allows you to quickly implement visitor and checkout events through the Pinterest Conversion Pixel. &lt;a href="https://www.cadence-labs.com/2016/05/free-pinterest-tracking-pixel-extension-magento/" title="User Manual"&gt;&lt;strong&gt;Learn how it works.&lt;/strong&gt;&lt;/a&gt;. &lt;/p&gt;&#xD;
+&lt;p&gt;After setting your Pinterested TID (Pixel Id), you may:&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Track Visit (code is displayed on every page)&lt;/li&gt;&#xD;
+&lt;li&gt;Track Checkouts (code is displayed only upon successful checkout)&lt;/li&gt;&#xD;
+&lt;/ul&gt; &#xD;
+&lt;p&gt; The extension works by attaching the relevant pixel code (for either Visits or Conversions) to your store's webpage, just after the start of the &lt;strong&gt;body&lt;/strong&gt; tag. If you have the correct pixel id installed, Pinterest will do the rest.&lt;/p&gt;&lt;p&gt;Click here to view our &lt;a href="https://www.cadence-labs.com/2016/05/free-pinterest-tracking-pixel-extension-magento/"&gt;Pinterest Tracking Pixel Install Guide&lt;/a&gt;.&lt;/p&gt;&#xD;
+&lt;h2&gt;Multistore; Tracks Grand Total and Quantity&lt;/h2&gt;&#xD;
+&lt;p&gt;This extension supports installations with multiple websites and/or stores. The Checkout Pixel will track the grand total and the quantity ordered.&lt;/p&gt; &#xD;
+&#xD;
+&lt;h2&gt;About The Developer&lt;/h2&gt;&#xD;
+&lt;p&gt;&lt;a href="http://www.cadence-labs.com/" title="Cadence Labs"&gt;Cadence Labs&lt;/a&gt; is a digital design, software development, and Magento agency based in Boulder, Colorado. Our developers are Magento certified eCommerce geeks!&lt;/p&gt;</description>
+    <notes>Tested on 1.9</notes>
+    <authors><author><name>Cadence Labs</name><user>cadencelabs</user><email>alan@cadence-labs.com</email></author></authors>
+    <date>2016-05-30</date>
+    <time>17:40:55</time>
+    <contents><target name="magecommunity"><dir name="Cadence"><dir name="Pinterest"><dir name="Helper"><file name="Data.php" hash="65b74f77e24f47fbe1709e9ad0a603c6"/></dir><dir name="etc"><file name="adminhtml.xml" hash="8a6e311f8ef36556d905501eeff33480"/><file name="config.xml" hash="935e3867b2b14b58609d74c2f1e07826"/><file name="system.xml" hash="92534c60cb3cbf555814a566ee8181d1"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Cadence_Pinterest.xml" hash="9d220294781c37382bc941547b346618"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="cadence_pinterest.xml" hash="24a81722f309d7b3f84e11548333bff8"/></dir><dir name="template"><dir name="cadence"><dir name="pinterest"><file name="conversion.phtml" hash="302fc4de4eeeee0c1dd7c624a26b1014"/><file name="visitor.phtml" hash="1350e7b52365e3ef446f8dab063e1045"/></dir></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>5.6.9</max></php></required></dependencies>
+</package>

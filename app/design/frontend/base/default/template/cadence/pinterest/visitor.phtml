@@ -1,0 +1,10 @@
+<?php
+$helper = Mage::helper("cadence_pinterest");
+if (!$helper->isVisitorPixelEnabled()) {
+    return;
+}
+$id = $helper->getVisitorPixelId();
+?>
+<!-- Pinterest Visitor Pixel Code -->
+<img height="1" width="1" style="display:none;" alt="" src="https://ct.pinterest.com/?tid=<?php echo $id ?>&value=0.00&quantity=1"/>
+<!-- End Pinterest Visitor Pixel Code -->
