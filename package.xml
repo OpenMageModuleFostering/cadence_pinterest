@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>cadence_pinterest</name>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <stability>stable</stability>
     <license>GNU GPL</license>
     <channel>community</channel>
@@ -22,9 +22,9 @@
 &lt;p&gt;&lt;a href="http://www.cadence-labs.com/" title="Cadence Labs"&gt;Cadence Labs&lt;/a&gt; is a digital design, software development, and Magento agency based in Boulder, Colorado. Our developers are Magento certified eCommerce geeks!&lt;/p&gt;</description>
     <notes>Added support for new Pinterest Tag javascript implementation, events supported: addToCart, checkout</notes>
     <authors><author><name>Cadence Labs</name><user>cadencelabs</user><email>alan@cadence-labs.com</email></author></authors>
-    <date>2017-07-18</date>
-    <time>22:58:48</time>
-    <contents><target name="magecommunity"><dir name="Cadence"><dir name="Pinterest"><dir name="Helper"><file name="Data.php" hash="14d312759fcac6d8698d7b0896eba7d8"/></dir><dir name="Model"><file name="Observer.php" hash="67020552b997f0add7aad51a1c9424fe"/><file name="Session.php" hash="9d3ce8bb971fb9b7cfa375a7f45ed13a"/></dir><dir name="etc"><file name="adminhtml.xml" hash="8a6e311f8ef36556d905501eeff33480"/><file name="config.xml" hash="cf84bc50432330dd3b2569a3c6525c01"/><file name="system.xml" hash="2dda0b9ea42e5a044bc0dfa40885cbaa"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Cadence_Pinterest.xml" hash="9d220294781c37382bc941547b346618"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="cadence_pinterest.xml" hash="91c4c6dcfe4d40f48a41fa6611fc45ad"/></dir><dir name="template"><dir name="cadence"><dir name="pinterest"><file name="conversion.phtml" hash="5eb7d67a31c4b74ac48949cec0a450d0"/><file name="events.phtml" hash="bc90c17ba88b16bfc61bd10f245151a9"/><file name="visitor.phtml" hash="15ce51a2586ca1ae13e61585d669fce4"/></dir></dir></dir></dir></dir></dir></target></contents>
+    <date>2017-07-20</date>
+    <time>21:13:18</time>
+    <contents><target name="magecommunity"><dir name="Cadence"><dir name="Pinterest"><dir name="Helper"><file name="Data.php" hash="14d312759fcac6d8698d7b0896eba7d8"/></dir><dir name="Model"><file name="Observer.php" hash="67020552b997f0add7aad51a1c9424fe"/><file name="Session.php" hash="9d3ce8bb971fb9b7cfa375a7f45ed13a"/></dir><dir name="etc"><file name="adminhtml.xml" hash="8a6e311f8ef36556d905501eeff33480"/><file name="config.xml" hash="cf84bc50432330dd3b2569a3c6525c01"/><file name="system.xml" hash="f7221c4f8516a46fabde6a6126d8a285"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Cadence_Pinterest.xml" hash="9d220294781c37382bc941547b346618"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="cadence_pinterest.xml" hash="91c4c6dcfe4d40f48a41fa6611fc45ad"/></dir><dir name="template"><dir name="cadence"><dir name="pinterest"><file name="conversion.phtml" hash="5eb7d67a31c4b74ac48949cec0a450d0"/><file name="events.phtml" hash="bc90c17ba88b16bfc61bd10f245151a9"/><file name="visitor.phtml" hash="15ce51a2586ca1ae13e61585d669fce4"/></dir></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.2.0</min><max>7.1.9</max></php></required></dependencies>
 </package>

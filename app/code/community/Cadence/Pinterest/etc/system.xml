@@ -44,7 +44,7 @@
                     </fields>
                 </visitor>
                 <conversion translate="label">
-                    <label>Conversion Event (Optional)</label>
+                    <label>Checkout Event (Optional)</label>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
@@ -58,7 +58,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment>The base tag must be enabled to track conversions. Includes parameters for grand total, quantity ordered, and currency.</comment>
+                            <comment>The base tag must be enabled to track Checkouts. Includes parameters for grand total, quantity ordered, and currency. Also tracks the individual items purchased.</comment>
                         </enabled>
                     </fields>
                 </conversion>
@@ -77,7 +77,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment>The base tag must be enabled to track AddToCart. Includes parameters for product subtotal, quantity added, and currency.</comment>
+                            <comment>The base tag must be enabled to track AddToCart. Includes parameters for product subtotal, quantity added, and currency. Also tracks the individual items added.</comment>
                         </enabled>
                     </fields>
                 </add_to_cart>
