@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 This extension allows you to quickly implement Pinterest conversion tracking and code on your Magento store. Supports Visit and Checkout conversion events. 
